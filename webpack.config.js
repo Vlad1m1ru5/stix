@@ -1,3 +1,4 @@
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
 
@@ -7,7 +8,12 @@ const devtool = mode === 'development' ? 'inline-source-map' : ''
 module.exports = {
   mode,
   devtool,
-  entry: path.resolve(__dirname, './src/index.tsx'),
+  entry: {
+    "main": path.resolve(__dirname, './src/index.tsx'),
+    "dashboard": path.resolve(__dirname, "./src/components/dashboard.tsx"),
+    "home": path.resolve(__dirname, "./src/components/home.tsx"),
+    "login": path.resolve(__dirname, "./src/components/login.tsx"),
+  },
   output: {
     filename: '[name].[contenthash].js',
     path: path.join(__dirname, 'dist')
@@ -45,6 +51,7 @@ module.exports = {
     }
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, './src/index.html')
     })
