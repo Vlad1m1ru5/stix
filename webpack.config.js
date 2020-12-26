@@ -3,20 +3,22 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
 
 const mode = process.env.NODE_ENV
-const devtool = mode === 'development' ? 'inline-source-map' : ''
+const devtool = mode === 'development' ? 'inline-source-map' : false
 
 module.exports = {
   mode,
   devtool,
   entry: {
-    "main": path.resolve(__dirname, './src/index.tsx'),
-    "dashboard": path.resolve(__dirname, "./src/components/dashboard.tsx"),
-    "home": path.resolve(__dirname, "./src/components/home.tsx"),
-    "login": path.resolve(__dirname, "./src/components/login.tsx"),
+    "main": path.resolve(__dirname, './src/index.tsx')
   },
   output: {
     filename: '[name].[contenthash].js',
     path: path.join(__dirname, 'dist')
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all'
+    }
   },
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
