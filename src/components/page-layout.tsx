@@ -1,13 +1,13 @@
 import { css } from '@emotion/react'
 import React from 'react'
 
-const Page: React.FunctionComponent = ({ children }) => (
+const PageLayout: React.FunctionComponent = ({ children }) => (
   <div css={pageCss}>
     {children}
   </div>
 )
 
-export default Page
+export default PageLayout
 
 const pageCss = css`
   width: 100%;
