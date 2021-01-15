@@ -1,15 +1,8 @@
-import { css } from '@emotion/react'
-import React from 'react'
+import styled from '@emotion/styled'
 
-const ImposterLayout: React.FunctionComponent = ({ children }) => (
-  <div css={imposterCss}>
-    {children}
-  </div>
-)
-
-export default ImposterLayout
-
-const imposterCss = css`
+const ImposterLayout = styled.div`
   width: 100vw;
   height: 100vh;
 `
+
+export default ImposterLayout

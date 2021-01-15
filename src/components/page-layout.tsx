@@ -1,15 +1,6 @@
-import { css } from '@emotion/react'
-import React from 'react'
+import styled from '@emotion/styled'
 
-const PageLayout: React.FunctionComponent = ({ children }) => (
-  <div css={pageCss}>
-    {children}
-  </div>
-)
-
-export default PageLayout
-
-const pageCss = css`
+const PageLayout = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
@@ -19,3 +10,5 @@ const pageCss = css`
     flex-grow: 1;
   }
 `
+
+export default PageLayout

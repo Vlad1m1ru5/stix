@@ -9,7 +9,7 @@ module.exports = {
   mode,
   devtool,
   entry: {
-    "main": path.resolve(__dirname, './src/index.tsx')
+    'main': path.resolve(__dirname, './src/index.tsx')
   },
   output: {
     filename: '[name].[contenthash].js',
