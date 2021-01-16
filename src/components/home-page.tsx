@@ -1,5 +1,5 @@
 import React from 'react'
-import PageLayout from 'components/page-layout'
+import PageLayout from 'components/styled/page-layout'
 
 const HomePage: React.FunctionComponent = () => (
   <PageLayout>

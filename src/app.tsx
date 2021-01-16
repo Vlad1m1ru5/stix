@@ -1,5 +1,5 @@
 import ImposterLayout from 'components/imposter-layout'
-import GlobalTheme from 'components/global-theme'
+import GlobalTheme from 'components/styled/global-theme'
 import LoadingMessage from 'components/loading-message'
 import React, { Suspense } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
