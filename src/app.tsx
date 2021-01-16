@@ -1,14 +1,14 @@
 import LoadingMessage from 'components/loading-message'
 import React, { Suspense } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import SiteGlobalTheme from 'components/site-global-theme'
+import SiteGlobalStyles from 'components/site-global-styles'
 
 const DashboardPage = React.lazy(() => import('components/dashboard-page'))
 const HomePage = React.lazy(() => import('components/home-page'))
 const LoginPage = React.lazy(() => import('components/login-page'))
 
 const App: React.FunctionComponent = () => (
-  <SiteGlobalTheme>
+  <SiteGlobalStyles>
     <Router>
       <Suspense fallback={<LoadingMessage />}>
         <Switch>
@@ -18,7 +18,7 @@ const App: React.FunctionComponent = () => (
         </Switch>
       </Suspense>
     </Router>
-  </SiteGlobalTheme>
+  </SiteGlobalStyles>
 )
 
 export default App
