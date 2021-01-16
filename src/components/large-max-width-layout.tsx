@@ -1,5 +1,5 @@
-import React from 'react'
 import MaxWidthLayout from 'components/styled/max-width-layout'
+import React from 'react'
 
 const LargeMaxWidthLayout: React.FunctionComponent = ({ children }) => {
 

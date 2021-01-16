@@ -1,5 +1,5 @@
-import React from 'react'
 import PageLink from 'components/router/page-link'
+import React from 'react'
 import SiteTitle from 'components/styled/site-title'
 
 const SiteHomePageLink: React.FunctionComponent = () => {

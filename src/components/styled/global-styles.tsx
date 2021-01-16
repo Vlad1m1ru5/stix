@@ -1,7 +1,7 @@
 import { css, Global } from '@emotion/react'
 import React from 'react'
 
-const GlobalTheme: React.FunctionComponent = () => {
+const GlobalStyles: React.FunctionComponent = () => {
 
   const globalStyles = css`
     html,
@@ -21,4 +21,4 @@ const GlobalTheme: React.FunctionComponent = () => {
 
 }
 
-export default GlobalTheme
+export default GlobalStyles
