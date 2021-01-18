@@ -23,10 +23,9 @@ export const Header = styled.header`
   }
 `
 
-export const Body = styled.div`
+export const Main = styled.main`
   p {
     white-space: pre;
-    hyphens: auto;
   }
 `
 
