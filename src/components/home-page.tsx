@@ -1,7 +1,7 @@
 import LargeMaxWidthLayout from 'components/large-max-width-layout'
+import SiteHomePageLink from 'components/site-home-page-link'
 import PageLayout from 'components/styled/page-layout'
 import React from 'react'
-import SiteHomePageLink from 'components/site-home-page-link'
 
 const HomePage: React.FunctionComponent = () => (
   <PageLayout>

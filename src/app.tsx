@@ -1,7 +1,7 @@
 import LoadingMessage from 'components/loading-message'
+import SiteGlobalStyles from 'components/site-global-styles'
 import React, { Suspense } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import SiteGlobalStyles from 'components/site-global-styles'
 
 const DashboardPage = React.lazy(() => import('components/dashboard-page'))
 const HomePage = React.lazy(() => import('components/home-page'))
