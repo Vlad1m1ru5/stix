@@ -5,7 +5,7 @@ interface CenteredProps { centered?: boolean }
 
 const BasePlaneCard = styled.article<CenteredProps>`
   border-radius: 8px;
-  padding: 8px;
+  padding: 32px;
   border: 1px solid;
   ${({ centered }) => centered ? 'text-align: center' : ''};
 `
@@ -42,8 +42,8 @@ type PlaneCardComponent = React.FunctionComponent<CenteredProps> & {
   Footer: typeof PlaneCardFooter;
  }
 
-const PlaneCard: PlaneCardComponent = ({ children, ...restProps }) => (
-  <BasePlaneCard {...restProps}>
+const PlaneCard: PlaneCardComponent = ({ children, centered }) => (
+  <BasePlaneCard centered={centered}>
     {children}
   </BasePlaneCard>
 )

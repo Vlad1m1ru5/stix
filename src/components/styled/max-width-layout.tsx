@@ -4,7 +4,9 @@ const MaxWidthLayout = styled.div<{ maxWidth: string }>(
   ({ maxWidth }) => ({
     maxWidth,
     marginLeft: 'auto',
-    marginRight: 'auto'
+    marginRight: 'auto',
+    paddingLeft: '1rem',
+    paddingRight: '1rem'
   })
 )
 
