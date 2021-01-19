@@ -1,21 +1,17 @@
-import PlaneCard, {
-  Footer as PlaneCardFooter,
-  Header as PlaneCardHeader, 
-  Main as PlaneCardMain
-} from 'components/styled/plane-card'
+import PlaneCard from 'components/styled/plane-card'
 import React from 'react'
 
 const SiteLandingCard: React.FunctionComponent = () => (
   <PlaneCard centered>
-    <PlaneCardHeader>
+    <PlaneCard.Header>
       <h1>Stix</h1>
-    </PlaneCardHeader>
-    <PlaneCardMain>
+    </PlaneCard.Header>
+    <PlaneCard.Main>
       <p>Create your unique workspace with stickers</p>
-    </PlaneCardMain>
-    <PlaneCardFooter>
+    </PlaneCard.Main>
+    <PlaneCard.Footer centered>
       <button>Start</button>
-    </PlaneCardFooter>
+    </PlaneCard.Footer>
   </PlaneCard>
 )
 

@@ -1,15 +1,16 @@
 import styled from '@emotion/styled'
+import React from 'react'
 
-const PlaneCard = styled.article<{ centered?: boolean }>`
+interface CenteredProps { centered?: boolean }
+
+const BasePlaneCard = styled.article<CenteredProps>`
   border-radius: 8px;
   padding: 8px;
   border: 1px solid;
-  ${({ centered }) => centered ? 'text-align: center;' : ''}
+  ${({ centered }) => centered ? 'text-align: center' : ''};
 `
 
-export default PlaneCard
-
-export const Header = styled.header`
+const PlaneCardHeader = styled.header`
   & h1 {
     font-size: 7rem;
   }
@@ -23,14 +24,32 @@ export const Header = styled.header`
   }
 `
 
-export const Main = styled.main`
+const PlaneCardMain = styled.main`
   p {
     white-space: pre;
   }
 `
 
-export const Footer = styled.footer`
+const PlaneCardFooter = styled.footer<CenteredProps>`
   display: flex;
   flex-flow: row nowrap;
-  justify-content: center;
+  justify-content: ${({ centered }) => centered ? 'center' : 'start'};
 `
+
+type PlaneCardComponent = React.FunctionComponent<CenteredProps> & { 
+  Header: typeof PlaneCardHeader;
+  Main: typeof PlaneCardMain;
+  Footer: typeof PlaneCardFooter;
+ }
+
+const PlaneCard: PlaneCardComponent = ({ children, ...restProps }) => (
+  <BasePlaneCard {...restProps}>
+    {children}
+  </BasePlaneCard>
+)
+
+PlaneCard.Header = PlaneCardHeader
+PlaneCard.Main = PlaneCardMain
+PlaneCard.Footer = PlaneCardFooter
+
+export default PlaneCard
