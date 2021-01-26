@@ -17,21 +17,21 @@ const HomePage: React.FunctionComponent = () => {
 
   return (
     <PageLayout>
-      <header>
+      <PageLayout.Header>
         <LargeMaxWidthLayout>
           <SiteHomePageLink />
         </LargeMaxWidthLayout>
-      </header>
-      <main>
+      </PageLayout.Header>
+      <PageLayout.Main>
         <LargeMaxWidthLayout>
           <SiteLandingCard availablePage={availableNewDashboardPage} />
         </LargeMaxWidthLayout>
-      </main>
-      <footer>
+      </PageLayout.Main>
+      <PageLayout.Footer>
         <LargeMaxWidthLayout>
           <SiteCurrentYearCopyright currentYear={current2021Year} />
         </LargeMaxWidthLayout>
-      </footer>
+      </PageLayout.Footer>
     </PageLayout>
   )
 }

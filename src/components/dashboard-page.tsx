@@ -10,21 +10,21 @@ const DashboardPage: React.FunctionComponent = () => {
 
   return (
     <PageLayout>
-      <header>
+      <PageLayout.Header>
         <LargeMaxWidthLayout>
           <SiteHomePageLink />
         </LargeMaxWidthLayout>
-      </header>
-      <main>
+      </PageLayout.Header>
+      <PageLayout.Main>
         <LargeMaxWidthLayout>
           DASHBOARD
         </LargeMaxWidthLayout>
-      </main>
-      <footer>
+      </PageLayout.Main>
+      <PageLayout.Footer>
         <LargeMaxWidthLayout>
           <SiteCurrentYearCopyright currentYear={current2021Year} />
         </LargeMaxWidthLayout>
-      </footer>
+      </PageLayout.Footer>
     </PageLayout>
   )
 }

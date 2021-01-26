@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
+import React from 'react'
 
-const PageLayout = styled.div`
+const BasePageLayout = styled.div`
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -11,7 +12,7 @@ const PageLayout = styled.div`
     padding-bottom: 20px;
 
     &:not(:last-child) {
-      border-bottom: 1px solid; //todo: set border color
+      border-bottom: 1px solid;
     }
   }
 
@@ -19,5 +20,27 @@ const PageLayout = styled.div`
     flex-grow: 1;
   }
 `
+
+const PageLayoutHeader = styled.header``
+
+const PageLayoutMain = styled.main``
+
+const PageLayoutFooter = styled.footer``
+
+type PageLayoutComponent = React.FunctionComponent & {
+  Header: typeof PageLayoutHeader,
+  Main: typeof PageLayoutMain,
+  Footer: typeof PageLayoutFooter
+}
+
+const PageLayout: PageLayoutComponent = ({ children }) => (
+  <BasePageLayout>
+    {children}
+  </BasePageLayout>
+)
+
+PageLayout.Header = PageLayoutHeader
+PageLayout.Main = PageLayoutMain
+PageLayout.Footer = PageLayoutFooter
 
 export default PageLayout

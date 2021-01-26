@@ -40,7 +40,7 @@ type PlaneCardComponent = React.FunctionComponent<PlaneCardProps> & {
   Header: typeof PlaneCardHeader;
   Main: typeof PlaneCardMain;
   Footer: typeof PlaneCardFooter;
- }
+}
 
 const PlaneCard: PlaneCardComponent = ({ children, centered }) => (
   <BasePlaneCard centered={centered}>

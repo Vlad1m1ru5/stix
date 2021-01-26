@@ -3,7 +3,7 @@ import SiteTitle from 'components/styled/site-title'
 import React from 'react'
 
 const SiteHomePageLink: React.FunctionComponent = () => {
- 
+
   const homePageRoute = '/home'
 
   return (
