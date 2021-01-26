@@ -14,7 +14,7 @@ const App: React.FunctionComponent = () => (
         <Switch>
           <Route path="/login" component={LoginPage} />
           <Route path="/dashboard" component={DashboardPage} />
-          <Route path={['/', '/home']} component={HomePage} />
+          <Route exact path={['/', '/home']} component={HomePage} />
         </Switch>
       </Suspense>
     </Router>

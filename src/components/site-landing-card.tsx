@@ -1,7 +1,13 @@
+import PageLinkShortButton from 'components/page-link-short-button'
 import PlaneCard from 'components/styled/plane-card'
 import React from 'react'
+import { AvailablePage } from 'types/page'
 
-const SiteLandingCard: React.FunctionComponent = () => (
+interface SiteLandingCardProps {
+  availablePage: AvailablePage
+}
+
+const SiteLandingCard: React.FunctionComponent<SiteLandingCardProps> = ({ availablePage }) => (
   <PlaneCard centered>
     <PlaneCard.Header>
       <h1>Stix</h1>
@@ -10,7 +16,7 @@ const SiteLandingCard: React.FunctionComponent = () => (
       <p>Create your unique workspace with stickers</p>
     </PlaneCard.Main>
     <PlaneCard.Footer centered>
-      <button>Start</button>
+      <PageLinkShortButton toPage={availablePage.to}>{availablePage.action}</PageLinkShortButton>
     </PlaneCard.Footer>
   </PlaneCard>
 )

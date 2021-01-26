@@ -1,9 +1,9 @@
 import styled from '@emotion/styled'
 import React from 'react'
 
-interface CenteredProps { centered?: boolean }
+interface PlaneCardProps { centered?: boolean }
 
-const BasePlaneCard = styled.article<CenteredProps>`
+const BasePlaneCard = styled.article<PlaneCardProps>`
   border-radius: 8px;
   padding: 32px;
   border: 1px solid;
@@ -30,13 +30,13 @@ const PlaneCardMain = styled.main`
   }
 `
 
-const PlaneCardFooter = styled.footer<CenteredProps>`
+const PlaneCardFooter = styled.footer<PlaneCardProps>`
   display: flex;
   flex-flow: row nowrap;
   justify-content: ${({ centered }) => centered ? 'center' : 'start'};
 `
 
-type PlaneCardComponent = React.FunctionComponent<CenteredProps> & { 
+type PlaneCardComponent = React.FunctionComponent<PlaneCardProps> & { 
   Header: typeof PlaneCardHeader;
   Main: typeof PlaneCardMain;
   Footer: typeof PlaneCardFooter;
